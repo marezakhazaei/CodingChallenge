@@ -6,6 +6,8 @@ namespace CodingChallenge.ReversingString
     {
         public static string Reverse(string s)
         {
+            if (string.IsNullOrEmpty(s))
+                return s;
             var arrayChar = s.ToCharArray();
             var endChar = arrayChar.Length - 1;
             for (int startChar = 0; startChar <= endChar; startChar++)
