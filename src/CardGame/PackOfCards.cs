@@ -39,11 +39,12 @@ namespace CodingChallenge.CardGame
         {
             if (Count != 52)
             {
-                for (int i = removedPack.Count - 1; i >= 0; i--)
-                {
-                    pack.Add(removedPack[i]);
-                    removedPack.RemoveAt(i);
-                }
+                if (removedPack.Count != 0)
+                    for (int i = removedPack.Count - 1; i >= 0; i--)
+                    {
+                        pack.Add(removedPack[i]);
+                        removedPack.RemoveAt(i);
+                    }
             }
             Random num = new Random();
             for (int i = 0; i < pack.Count - 1; i++)
